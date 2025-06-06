@@ -12,7 +12,7 @@ async function page({ params }) {
     }
     const product = await data.json();
 
-    console.log(product);    // Simulating fetching product details based on ID
+    console.log(product); // Simulating fetching product details based on ID
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
             <div className="max-w-6xl mx-auto px-4 py-8">
@@ -21,8 +21,18 @@ async function page({ params }) {
                     href="/products"
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors mb-8 group"
                 >
-                    <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    <svg
+                        className="w-4 h-4 transition-transform group-hover:-translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 19l-7-7 7-7"
+                        />
                     </svg>
                     Back to Products
                 </Link>
@@ -40,11 +50,11 @@ async function page({ params }) {
                                 className="w-full h-auto object-cover"
                             />
                         </div>
-                        
+
                         {/* Category Badge */}
                         <div className="absolute top-4 left-4">
                             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                                {product.category || 'Product'}
+                                {product.category || "Product"}
                             </span>
                         </div>
                     </div>
@@ -62,9 +72,10 @@ async function page({ params }) {
                                         <svg
                                             key={i}
                                             className={`w-5 h-5 ${
-                                                i < Math.floor(product.rating || 4)
-                                                    ? 'text-yellow-400'
-                                                    : 'text-gray-300 dark:text-gray-600'
+                                                i <
+                                                Math.floor(product.rating || 4)
+                                                    ? "text-yellow-400"
+                                                    : "text-gray-300 dark:text-gray-600"
                                             }`}
                                             fill="currentColor"
                                             viewBox="0 0 20 20"
@@ -74,7 +85,8 @@ async function page({ params }) {
                                     ))}
                                 </div>
                                 <span className="text-sm text-gray-600 dark:text-gray-400">
-                                    ({product.rating || 4.0}) • {product.stock || 0} in stock
+                                    ({product.rating || 4.0}) •{" "}
+                                    {product.stock || 0} in stock
                                 </span>
                             </div>
                         </div>
@@ -86,7 +98,11 @@ async function page({ params }) {
                             </span>
                             {product.discountPercentage && (
                                 <span className="text-lg text-gray-500 dark:text-gray-400 line-through">
-                                    ${(product.price / (1 - product.discountPercentage / 100)).toFixed(2)}
+                                    $
+                                    {(
+                                        product.price /
+                                        (1 - product.discountPercentage / 100)
+                                    ).toFixed(2)}
                                 </span>
                             )}
                             {product.discountPercentage && (
@@ -116,20 +132,36 @@ async function page({ params }) {
                         {/* Product Info */}
                         <div className="grid grid-cols-2 gap-4 pt-6 border-t border-gray-200 dark:border-gray-700">
                             <div>
-                                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Brand</dt>
-                                <dd className="text-sm text-gray-900 dark:text-white">{product.brand || 'Unknown'}</dd>
+                                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                                    Brand
+                                </dt>
+                                <dd className="text-sm text-gray-900 dark:text-white">
+                                    {product.brand || "Unknown"}
+                                </dd>
                             </div>
                             <div>
-                                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">SKU</dt>
-                                <dd className="text-sm text-gray-900 dark:text-white">{product.sku || product.id}</dd>
+                                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                                    SKU
+                                </dt>
+                                <dd className="text-sm text-gray-900 dark:text-white">
+                                    {product.sku || product.id}
+                                </dd>
                             </div>
                             <div>
-                                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Weight</dt>
-                                <dd className="text-sm text-gray-900 dark:text-white">{product.weight || 'N/A'}kg</dd>
+                                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                                    Weight
+                                </dt>
+                                <dd className="text-sm text-gray-900 dark:text-white">
+                                    {product.weight || "N/A"}kg
+                                </dd>
                             </div>
                             <div>
-                                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Warranty</dt>
-                                <dd className="text-sm text-gray-900 dark:text-white">{product.warrantyInformation || '1 Year'}</dd>
+                                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                                    Warranty
+                                </dt>
+                                <dd className="text-sm text-gray-900 dark:text-white">
+                                    {product.warrantyInformation || "1 Year"}
+                                </dd>
                             </div>
                         </div>
                     </div>
