@@ -8,17 +8,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
-          <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
+          <div className="col-span-1 md:col-span-2">            <Link href="/" className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-                N
+                AA
               </div>
               <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                NextApp
+                Ahmad Alsakhen
               </span>
             </Link>
             <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
-              A modern Next.js application showcasing beautiful UI components and seamless user experience.
+              Full Stack Developer specializing in Laravel, React, Vue.js, and modern web technologies. Building innovative solutions with clean code and exceptional user experiences.
             </p>
             <div className="flex space-x-4">
               <a
@@ -88,9 +87,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0">
-            © {currentYear} NextApp. All rights reserved.
+        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center">          <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0">
+            © {currentYear} Ahmad Alsakhen. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
             <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
